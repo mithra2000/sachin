@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function studentdetails(){
+        var n1=(document.getElementById("name1").value);
+        var a1=(document.getElementById("age1").value);
+        var r1=(document.getElementById("rollno1").value);
+        var json1={name:n1,age:a1,rollno:r1}
+
+        var n2=(document.getElementById("name2").value);
+        var a2=(document.getElementById("age2").value);
+        var r2=(document.getElementById("rollno2").value);
+        var json2={name:n2,age:a2,rollno:r2};
+
+       document.write("<table border='5' width=50% >");
+       document.write(
+           "<tr> <td>"+json1.name+"</td> <td>" +json1.age+"</td> <td>" +json1.rollno+"</td></tr>");
+       
+       document.write(
+           "<tr> <td>"+json2.name+"</td> <td>" +json2.age+"</td> <td>" +json2.rollno+"</td></tr>");
+       
+       document.write("</table>");
+       var avg=(parseInt(n1)+parseInt(n2))/2;
+       var avg1=(parseInt(a1)+parseInt(a2))/2;
+       var avg2=(parseInt(r1)+parseInt(r2))/2;
+
+       document.write(avg+"<br/>");
+       document.write(avg1+"<br/>");
+       document.write(avg2+"<br/>");
+
+    }
+    </script>
+
+</head>
+<body>
+    <p>
+        ENTER THE DETAILS OF STUDENT 1.
+    </p>
+    <input type="text" placeholder="Name" id="name1"><br>
+    <input type="text" placeholder="Age" id="age1"><br>
+    <input type="text" placeholder="Roll No" id="rollno1"><br>
+
+    <p>
+        ENTER THE DETAILS OF STUDENT 2.
+    </p>
+    <input type="text" placeholder="Name" id="name2"><br>
+    <input type="text" placeholder="Age" id="age2"><br>
+    <input type="text" placeholder="Roll no" id="rollno2"><br>
+    <br>
+    <input type="button" value="submit" onclick="studentdetails()"><br>
+
+   
+</body>
+</html>
